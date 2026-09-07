@@ -10,7 +10,10 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">Ego Service</div>
+            <div class="nav-brand">
+                <span class="logo-icon">🚀</span>
+                Ego Service
+            </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
@@ -28,8 +31,8 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Get in touch with our team</p>
+            <h1>Get in Touch</h1>
+            <p>We're here to help and answer any questions you might have</p>
         </div>
     </section>
 
@@ -42,23 +45,28 @@
                     <h2>Send us a Message</h2>
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us more about your inquiry..." required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary">Send Message</button>
@@ -70,33 +78,64 @@
                     <h2>Contact Information</h2>
                     
                     <div class="info-item">
-                        <h3>📍 Address</h3>
-                        <p>123 Trading Street<br>Financial District<br>New York, NY 10001</p>
+                        <h3>📍 Office Address</h3>
+                        <p>Ego Service Trading Hub<br>123 Financial Boulevard<br>New York, NY 10001<br>United States</p>
                     </div>
 
                     <div class="info-item">
-                        <h3>📞 Phone</h3>
-                        <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                        <h3>📞 Phone Support</h3>
+                        <p><strong>Toll Free:</strong> +1 (800) 555-0123<br><strong>International:</strong> +1 (212) 555-0456<br><strong>Direct Line:</strong> +1 (212) 555-0789</p>
                     </div>
 
                     <div class="info-item">
-                        <h3>📧 Email</h3>
-                        <p>info@egoservice.com<br>support@egoservice.com</p>
+                        <h3>📧 Email Support</h3>
+                        <p><strong>General:</strong> support@egoservice.com<br><strong>Sales:</strong> sales@egoservice.com<br><strong>Compliance:</strong> compliance@egoservice.com</p>
                     </div>
 
                     <div class="info-item">
-                        <h3>⏰ Business Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                        <h3>🕐 Business Hours</h3>
+                        <p><strong>Monday - Friday:</strong> 8:00 AM - 8:00 PM EST<br><strong>Saturday:</strong> 10:00 AM - 4:00 PM EST<br><strong>Sunday:</strong> Closed<br><strong>Holidays:</strong> Closed</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>🌍 Live Chat Support</h3>
+                        <p>Available 24/7 for quick questions and assistance</p>
+                        <a href="#" class="btn btn-secondary">Start Live Chat</a>
                     </div>
 
                     <div class="social-links">
-                        <h3>Follow Us</h3>
+                        <h3>Follow Our Updates</h3>
                         <div class="social-icons">
-                            <a href="#" class="social-icon">Twitter</a>
-                            <a href="#" class="social-icon">LinkedIn</a>
-                            <a href="#" class="social-icon">Facebook</a>
+                            <a href="https://twitter.com" class="social-icon" title="Twitter">𝕏 Twitter</a>
+                            <a href="https://linkedin.com" class="social-icon" title="LinkedIn">in LinkedIn</a>
+                            <a href="https://facebook.com" class="social-icon" title="Facebook">f Facebook</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How do I open an account?</h3>
+                    <p>Opening an account is quick and easy. Simply fill out our registration form, verify your email, complete identity verification, and you'll be ready to trade in minutes!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are your trading hours?</h3>
+                    <p>Our platform operates 24/5 for forex and crypto trading. Stock and commodity markets follow their respective exchange hours. Check our trading calendar for specific details.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is my money safe?</h3>
+                    <p>Yes! We use bank-level security, segregated accounts, and are fully regulated. Your funds are protected with the latest encryption technology.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are your commission rates?</h3>
+                    <p>Our rates are highly competitive. Forex starts at 0.1 pips, stocks from 0.1%, and crypto with minimal fees. Contact us for detailed pricing.</p>
                 </div>
             </div>
         </div>
@@ -108,7 +147,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Ego Service</h4>
-                    <p>Leading provider of professional trading solutions</p>
+                    <p>Your trusted partner in professional trading solutions since 2009</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -120,13 +159,21 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>Email: info@egoservice.com</p>
-                    <p>Phone: +1 (555) 123-4567</p>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@egoservice.com</p>
+                    <p>Phone: +1 (800) 555-0123</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Ego Service. All rights reserved.</p>
+                <p>&copy; 2024 Ego Service. All rights reserved. | Certified & Regulated</p>
             </div>
         </div>
     </footer>
