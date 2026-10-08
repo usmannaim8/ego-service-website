@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Portal | EGO SERVICE</title>
+    <meta name="description" content="Employee portal login for EGO SERVICE." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body class="portal-body">
+    <div class="portal-shell">
+      <div class="portal-panel portal-visual">
+        <div class="portal-brand">
+          <span class="brand-mark">E</span>
+          <h1>EGO SERVICE</h1>
+        </div>
+        <p>Professional global operations and internal resource coordination.</p>
+      </div>
+      <div class="portal-panel portal-form-panel">
+        <div class="portal-form-head">
+          <p class="eyebrow">Employee Portal</p>
+          <h2>Welcome back</h2>
+        </div>
+
+        <form class="form-card portal-form" id="employeeLoginForm">
+          <div class="field-group">
+            <label for="employeeId">Employee ID</label>
+            <input type="text" id="employeeId" name="employeeId" placeholder="EMP-001" required />
+          </div>
+          <div class="field-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required />
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Sign in</button>
+          <div class="helper-row">
+            <a href="#">Forgot password?</a>
+            <a href="index.html">Public website</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

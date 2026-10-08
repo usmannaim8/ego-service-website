@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audit Log | EGO SERVICE</title>
+    <meta name="description" content="Audit log concept for EGO SERVICE administration." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+  </head>
+  <body class="portal-page admin-page">
+    <header class="portal-header admin-header">
+      <div class="container portal-nav">
+        <div class="portal-brand-inline">
+          <span class="brand-mark">E</span>
+          <span>ADMINISTRATION</span>
+        </div>
+        <nav class="portal-menu">
+          <a href="../dashboard/index.html">Overview</a>
+          <a href="../employees/index.html">Employees</a>
+          <a href="../subsidiaries/index.html">Subsidiaries</a>
+          <a href="../workflows/index.html">Workflows</a>
+          <a href="index.html" class="active">Audit Log</a>
+        </nav>
+        <div class="user-chip">MA</div>
+      </div>
+    </header>
+
+    <main class="container portal-content">
+      <section class="welcome-panel">
+        <div>
+          <p class="eyebrow">Audit Log</p>
+          <h1>System activity</h1>
+        </div>
+      </section>
+
+      <section class="portal-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Action</th>
+              <th>User</th>
+              <th>Time</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Employee created</td>
+              <td>Master Admin</td>
+              <td>09:15 AM</td>
+              <td>Completed</td>
+            </tr>
+            <tr>
+              <td>Permission changed</td>
+              <td>Country Admin</td>
+              <td>11:20 AM</td>
+              <td>Completed</td>
+            </tr>
+            <tr>
+              <td>Document uploaded</td>
+              <td>Operations Lead</td>
+              <td>02:40 PM</td>
+              <td>Completed</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>
