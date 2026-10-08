@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ego Service Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-wrapper">
+            <!-- Logo Section -->
+            <div class="login-header">
+                <div class="login-logo">
+                    <span class="logo-icon-large">🚀</span>
+                    <h1>Ego Service</h1>
+                    <p>Management System</p>
+                </div>
+            </div>
+
+            <!-- Login Form -->
+            <div class="login-form-container">
+                <form id="loginForm" class="login-form">
+                    <div class="form-title">
+                        <h2>Sign In</h2>
+                        <p>Access your management dashboard</p>
+                    </div>
+
+                    <!-- Error Alert -->
+                    <div id="loginError" class="alert alert-error hidden">
+                        <span id="errorMessage"></span>
+                    </div>
+
+                    <!-- Success Alert -->
+                    <div id="loginSuccess" class="alert alert-success hidden">
+                        <span>Login successful! Redirecting...</span>
+                    </div>
+
+                    <!-- Username Field -->
+                    <div class="form-group">
+                        <label for="username">Username or Email</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">👤</span>
+                            <input 
+                                type="text" 
+                                id="username" 
+                                name="username" 
+                                placeholder="Enter your username or email"
+                                required
+                                autocomplete="username"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <div class="password-label">
+                            <label for="password">Password</label>
+                            <a href="forgot-password.html" class="forgot-link">Forgot?</a>
+                        </div>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Enter your password"
+                                required
+                                autocomplete="current-password"
+                            >
+                            <button type="button" class="password-toggle" id="passwordToggle">
+                                <span class="toggle-icon">👁️</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Remember Me -->
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">Remember me for 30 days</label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-login">
+                        <span id="buttonText">Sign In</span>
+                        <span id="loadingSpinner" class="spinner hidden"></span>
+                    </button>
+
+                    <!-- Sign Up Link -->
+                    <div class="login-footer">
+                        <p>Don't have an account? <a href="#">Contact your administrator</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Demo Credentials -->
+            <div class="demo-info">
+                <p><strong>Demo Credentials:</strong></p>
+                <p>Master Manager: <code>admin</code> / <code>password123</code></p>
+                <p>User: <code>user</code> / <code>password123</code></p>
+            </div>
+        </div>
+
+        <!-- Right Side Illustration -->
+        <div class="login-illustration">
+            <div class="illustration-content">
+                <div class="illustration-circle"></div>
+                <div class="illustration-icon">📊</div>
+                <h3>Professional Management System</h3>
+                <p>Secure access to your organization's trading and operations platform</p>
+                <ul class="feature-list">
+                    <li>✓ Real-time Analytics</li>
+                    <li>✓ Secure Authentication</li>
+                    <li>✓ User Management</li>
+                    <li>✓ Activity Tracking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+        // Login form handling
+        const loginForm = document.getElementById('loginForm');
+        const usernameField = document.getElementById('username');
+        const passwordField = document.getElementById('password');
+        const passwordToggle = document.getElementById('passwordToggle');
+        const errorAlert = document.getElementById('loginError');
+        const successAlert = document.getElementById('loginSuccess');
+        const errorMessage = document.getElementById('errorMessage');
+        const buttonText = document.getElementById('buttonText');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+
+        // Password toggle
+        passwordToggle.addEventListener('click', () => {
+            const type = passwordField.type === 'password' ? 'text' : 'password';
+            passwordField.type = type;
+            passwordToggle.classList.toggle('active');
+        });
+
+        // Form submission
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const username = usernameField.value.trim();
+            const password = passwordField.value;
+            const rememberMe = document.getElementById('rememberMe').checked;
+
+            // Hide alerts
+            errorAlert.classList.add('hidden');
+            successAlert.classList.add('hidden');
+
+            // Show loading state
+            buttonText.classList.add('hidden');
+            loadingSpinner.classList.remove('hidden');
+
+            // Simulate API call
+            setTimeout(() => {
+                // Demo credentials
+                if ((username === 'admin' || username === 'admin@egoservice.com') && password === 'password123') {
+                    // Master manager login
+                    localStorage.setItem('userRole', 'master_manager');
+                    localStorage.setItem('username', username);
+                    localStorage.setItem('userId', 'MM001');
+                    if (rememberMe) {
+                        localStorage.setItem('rememberMe', 'true');
+                    }
+                    
+                    successAlert.classList.remove('hidden');
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 1000);
+                } else if ((username === 'user' || username === 'user@egoservice.com') && password === 'password123') {
+                    // Regular user login
+                    localStorage.setItem('userRole', 'user');
+                    localStorage.setItem('username', username);
+                    localStorage.setItem('userId', 'USR001');
+                    if (rememberMe) {
+                        localStorage.setItem('rememberMe', 'true');
+                    }
+                    
+                    successAlert.classList.remove('hidden');
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 1000);
+                } else {
+                    // Invalid credentials
+                    errorMessage.textContent = 'Invalid username or password. Please try again.';
+                    errorAlert.classList.remove('hidden');
+                    buttonText.classList.remove('hidden');
+                    loadingSpinner.classList.add('hidden');
+                    passwordField.value = '';
+                }
+            }, 800);
+        });
+
+        // Check if already logged in
+        if (localStorage.getItem('username')) {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>
